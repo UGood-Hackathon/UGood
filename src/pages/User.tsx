@@ -22,4 +22,4 @@ const User: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default User;

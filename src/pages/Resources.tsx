@@ -22,4 +22,4 @@ const Resources: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default Resources;

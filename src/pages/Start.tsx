@@ -17,7 +17,7 @@ import {
 } from '@ionic/react';
 import { book, build, colorFill, grid } from 'ionicons/icons';
 import React from 'react';
-import './Tab1.css';
+import './Start.css';
 
 const Start: React.FC = () => {
   return (
@@ -68,4 +68,4 @@ const Start: React.FC = () => {
   );
 };
 
-export default Tab1;
+export default Start;
