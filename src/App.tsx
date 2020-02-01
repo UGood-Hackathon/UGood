@@ -10,10 +10,12 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { apps, flash, send } from 'ionicons/icons';
+import { book, person, home, text } from 'ionicons/icons';
+import Home from './pages/Home';
 import Start from './pages/Start';
 import User from './pages/User';
 import Resources from './pages/Resources';
+import './pages/styles.css'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,22 +41,28 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/start" component={Start} exact={true} />
-          <Route path="/user" component={User} exact={true} />
+          <Route path="/home" component={Home} exact={true} />
+          <Route path="/start" component={Start} />
+          <Route path="/user" component={User} />
           <Route path="/resources" component={Resources} />
+          <Redirect exact from="/" to="/home" />
           <Route exact path="/" />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
+        <IonTabButton tab="home" href="/home">
+          <IonIcon icon={home} />
+          <IonLabel>Home</IonLabel>
+        </IonTabButton>
           <IonTabButton tab="start" href="/start">
-            <IonIcon icon={flash} />
-            <IonLabel>User</IonLabel>
+            <IonIcon icon={text} />
+            <IonLabel>Start</IonLabel>
           </IonTabButton>
           <IonTabButton tab="user" href="/user">
-            <IonIcon icon={apps} />
+            <IonIcon icon={person} />
             <IonLabel>User</IonLabel>
           </IonTabButton>
           <IonTabButton tab="resources" href="/resources">
-            <IonIcon icon={send} />
+            <IonIcon icon={book} />
             <IonLabel>Resources</IonLabel>
           </IonTabButton>
         </IonTabBar>
