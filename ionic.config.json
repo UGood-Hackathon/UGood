@@ -1,0 +1,7 @@
+{
+  "name": "ugood",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
